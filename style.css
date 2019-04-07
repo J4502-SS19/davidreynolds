@@ -7,7 +7,7 @@ p {
 h1 {
   color: #000080;
   background-color: #fff;
-  font-family: 'Roboto Slab', Georgia, "Times New Roman", serif;
+  font-family: 'Roboto Slab', Georgia, serif;
   text-align: center;
 }
 
@@ -51,8 +51,9 @@ body {
 
 #footer {
   color: black;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: 'Roboto Slab';
   font-size: 0.8em;
+  font-weight: bold;
   border-top: 1px solid black;
 }
 
@@ -69,7 +70,18 @@ img {
 
 /*Grid*/
 h2 {
+  font-family: Helvetica;
+}
+
+h3 {
   font-family: 'Roboto Slab';
+  border-style: solid;
+  border-width: 10px;
+  font-size: 2em;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 4px;
+  padding-left: 4px;
 }
 
 .title {
@@ -113,26 +125,21 @@ article:last-of-type {
 }
 
 @media screen and (min-width: 450px) {
-
     nav ul {
         flex-flow: row;
         justify-content: space-between;
     }
-
 }
 
 @media screen and (min-width: 600px) {
-
     #container {
         width: 80%;
     }
-
     .authorbox img {
       display: block;
       width: 100%;
       margin-top: 0.5em;
     }
-
     .authorbox {
       width: 25%;
       max-width: 200px;
@@ -142,15 +149,12 @@ article:last-of-type {
 }
 
 @media screen and (min-width: 800px) {
-
     nav ul li {
       margin: 5px;
     }
-
     .pullquote {
       display: block;
     }
-
 }
 
 @media screen and (min-width:1000px) {
@@ -163,33 +167,26 @@ article:last-of-type {
         "c c e"
         "d d d";
   }
-
   .authorbox {
     width: 100%;
     grid-area: a;
   }
-
   .section1 {
     grid-area: b;
   }
-
   .image {
     grid-area: c;
   }
-
   .section2 {
     grid-area: d;
   }
-
   .pullquote {
     margin-top: 0;
     grid-area: e;
   }
-
   .section1 p:first-of-type, .section2 p:first-of-type {
     margin-top: 0;
   }
-
 }
 
 @media screen and (min-width:1200px) {
