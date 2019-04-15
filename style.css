@@ -9,6 +9,11 @@ h1 {
   background-color: #fff;
   font-family: 'Roboto Slab', Georgia, serif;
   text-align: center;
+  display: flex;
+  flex-flow: row;
+  margin: 0;
+  padding: 0 10px;
+  order: 2;
 }
 
 body {
@@ -24,8 +29,6 @@ body {
 #nav {
   padding: 0;
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
 }
 
 #nav li {
@@ -45,6 +48,13 @@ body {
   font-family: 'Roboto Slab', Helvetica, Arial, sans-serif;
 }
 
+@media (min-width: 600px) {
+  #nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
 #nav a:hover, #nav a:active {
   background-color: #c0c0c0;
 }
@@ -59,13 +69,6 @@ body {
 
 img {
   border: none;
-}
-
-@media (min-width: 600px) {
-  #nav {
-    flex-direction: row;
-    justify-content: space-around;
-  }
 }
 
 /*Grid*/
@@ -90,8 +93,7 @@ h3 {
 }
 
 nav ul {
-  display: flex;
-  flex-flow: column;
+  display: none;
 }
 
 .authorbox img {
@@ -199,4 +201,39 @@ article:last-of-type {
         "c c c ."
         ". d d .";
   }
+}
+
+nav ul li {
+    display: block;
+}
+
+nav a {
+    color: #f8ecc2;
+    display: block;
+    text-decoration: none;
+    padding: 20px 30px;
+}
+
+.menu-trigger {
+    order: 1;
+    font-size: 1.75em;
+    width: 2em;
+}
+
+@media screen and (min-width: 700px){
+    nav ul {
+        display: flex;
+    }
+    nav ul li {
+        border-top: none;
+    }
+    .menu-trigger {
+        display: none;
+    }
+    header h1 {
+        order: 1;
+    }
+    nav {
+        order: 2;
+    }
 }
